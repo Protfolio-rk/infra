@@ -14,5 +14,5 @@ module "fargate" {
 
   project_name     = var.project_name
   lb_subnets_ids = module.network.subnet_ids
-  lb_sg_id         = module.network.lb_sg_id
+  lb_sg_id         = module.network.alb_sg_id
 }
