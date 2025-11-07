@@ -94,8 +94,8 @@ resource "aws_security_group" "alb_sg" {
   vpc_id      = aws_vpc.main.id
 
   ingress {
-    from_port = 443
-    to_port   = 443
+    from_port = 81
+    to_port   = 81
     protocol  = "tcp"
     cidr_blocks = [
       aws_subnet.p_1.cidr_block,

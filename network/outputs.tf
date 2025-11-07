@@ -22,11 +22,11 @@ output "subnet_ids" {
 
 # Database Security Group
 
-output "database_client_sg_id" {
+output "database_client_sg" {
   value = aws_security_group.database_client_sg.id
 }
 
-output "database_cluster_sg_id" {
+output "database_cluster_sg" {
   value = aws_security_group.database_cluster_sg.id
 }
 
