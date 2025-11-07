@@ -12,7 +12,15 @@ module "ecr" {
 module "fargate" {
   source = "./fargate"
 
-  project_name     = var.project_name
+  project_name   = var.project_name
   lb_subnets_ids = module.network.subnet_ids
-  lb_sg_id         = module.network.alb_sg_id
+  lb_sg_id       = module.network.alb_sg_id
+}
+
+module "tf_backend" {
+  source = "./tfbackend"
+
+  project_name = var.project_name
+  bucket_name  = var.backend_bucket_name
+
 }
